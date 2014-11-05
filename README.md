@@ -63,8 +63,17 @@ hurl ponyfoo.com/articles/last --root article --ignore footer,.mm-count,.at-meta
 
 Also, the output will be paged using `$PAGER` for convenience. You can turn this off using `--no-paging`.
 
+It works well on most sites. Here's just the news links from EchoJS.
+
+```shell
+hget echojs.com --root #newslist --ignore "article>:not(h2)
+```
+
+![echojs-output.png][2]
+
 # License
 
 MIT
 
 [1]: https://www.npmjs.org/package/chalk
+[2]: http://i.imgur.com/SlwwrqL.png
