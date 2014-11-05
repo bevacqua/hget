@@ -66,7 +66,7 @@ Also, the output will be paged using `$PAGER` for convenience. You can turn this
 It works well on most sites. Here's just the news links from EchoJS.
 
 ```shell
-hget echojs.com --root #newslist --ignore "article>:not(h2)
+hget echojs.com --root #newslist --ignore "article>:not(h2)"
 ```
 
 ![echojs-output.png][2]
