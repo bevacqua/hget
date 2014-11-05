@@ -14,7 +14,6 @@ var argv = require('minimist')(process.argv.slice(2), {
     paging: 'p'
   }
 });
-var ReadableStream = require('stream').Readable;
 var hget = require('./');
 var resource = argv._[0];
 var parsed;
