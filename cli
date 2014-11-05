@@ -67,7 +67,7 @@ function response (err, res, body) {
 }
 
 function print (result) {
-  if (argv.paging === false) {
+  if (argv.paging === false || !process.stdin.isTTY) {
     console.log(result);
   } else {
     paged(result);
