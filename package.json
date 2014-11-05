@@ -1,0 +1,31 @@
+{
+  "name": "hget",
+  "description": "Render HTML in your terminal prettily",
+  "version": "1.0.0",
+  "homepage": "https://github.com/bevacqua/hget",
+  "authors": [
+    "Nicolas Bevacqua <nicolasbevacqua@gmail.com>"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/bevacqua/hget.git"
+  },
+  "bugs": {
+    "url": "https://github.com/bevacqua/hget/issues"
+  },
+  "bin": {
+    "hget": "./cli"
+  },
+  "dependencies": {
+    "cheerio": "^0.17.0",
+    "default-pager": "^1.0.1",
+    "get-stdin": "^3.0.0",
+    "he": "^0.5.0",
+    "html-md": "^3.0.2",
+    "minimist": "^1.1.0",
+    "request": "^2.47.0",
+    "type-is": "^1.5.2",
+    "ultramarked": "^1.6.2"
+  }
+}

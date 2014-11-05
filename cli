@@ -1,0 +1,82 @@
+#!/usr/bin/env node
+
+'use strict';
+
+var fs = require('fs');
+var request = require('request');
+var is = require('type-is');
+var stdin = require('get-stdin');
+var pager = require('default-pager');
+var argv = require('minimist')(process.argv.slice(2), {
+  alias: {
+    root: 'r',
+    ignore: 'i',
+    paging: 'p'
+  }
+});
+var ReadableStream = require('stream').Readable;
+var hget = require('./');
+var resource = argv._[0];
+var parsed;
+
+if (process.stdin.isTTY) {
+  fetch();
+} else {
+  stdin(parse);
+}
+
+function fetch () {
+  if (fs.existsSync(resource)) {
+    parse(read(resource));
+  } else {
+    request(normalize(resource), response);
+  }
+}
+
+function parse (data) {
+  if (parsed) {
+    return;
+  }
+  parsed = true;
+  print(hget(data, argv));
+}
+
+function read (file) {
+  return fs.readFileSync(file, 'utf8');
+}
+
+function normalize (url) {
+  var rurl = /^https?:\/\//i;
+  if (rurl.test(url) === false) {
+    return 'http://' + url;
+  } else {
+    return url;
+  }
+}
+
+function response (err, res, body) {
+  if (err) {
+    throw err;
+  }
+  if (is.hasBody(res) === false) {
+    throw new Error('Response body is empty.');
+  }
+  if (is(res, ['html']) === false) {
+    throw new Error('Response Content-Type is not HTML.');
+  }
+  parse(body);
+}
+
+function print (result) {
+  if (argv.paging === false) {
+    console.log(result);
+  } else {
+    paged(result);
+  }
+}
+
+function paged (result) {
+  var pages = pager();
+  pages.write(result);
+  pages.end();
+}
