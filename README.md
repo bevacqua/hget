@@ -1,8 +1,8 @@
 # hget
 
-> Render HTML in your terminal prettily
+> Render websites in plain text from your terminal
 
-A CLI and an API to render HTML in your terminal.
+A CLI and an API to convert HTML into plain text. Can be used to fetch a site's HTML version and convert it into plain text, or to deliver plain text versions of your site dynamically.
 
 # Install
 

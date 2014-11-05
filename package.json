@@ -1,6 +1,6 @@
 {
   "name": "hget",
-  "description": "Render HTML in your terminal prettily",
+  "description": "Render websites in plain text from your terminal",
   "version": "1.0.0",
   "homepage": "https://github.com/bevacqua/hget",
   "authors": [
