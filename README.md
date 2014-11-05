@@ -58,7 +58,7 @@ cat file.html | hget
 Ooh, the CLI also follows redirects.
 
 ```
-hurl ponyfoo.com/articles/last --root article --ignore footer,.mm-count,.at-meta
+hget ponyfoo.com/articles/last --root article --ignore footer,.mm-count,.at-meta
 ```
 
 Also, the output will be paged using `$PAGER` for convenience. You can turn this off using `--no-paging`.
