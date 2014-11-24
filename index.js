@@ -1,5 +1,6 @@
 'use strict';
 
+var stripColorCodes = require('stripcolorcodes');
 var ultramarked = require('ultramarked');
 var cheerio = require('cheerio');
 var htmlmd = require('html-md');
@@ -27,12 +28,14 @@ function filterInput (input, options) {
 
 function parse (input, options) {
   var o = options || {};
-  if (!o.root) { o.root = 'body'; }
+  if (!o.root) { o.root = 'body,*'; }
   var html = filterInput(input, o);
   var md = htmlmd(html);
   var term = ultramarked(md, { terminal: true });
-  var decoded = he.decode(term);
-  return decoded;
+  var stripped = stripColorCodes(term);
+  var decoded = he.decode(stripped);
+  var trimmed = decoded.trim();
+  return trimmed;
 }
 
 module.exports = parse;
