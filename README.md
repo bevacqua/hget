@@ -4,6 +4,8 @@
 
 A CLI and an API to convert HTML into plain text. Can be used to fetch a site's HTML version and convert it into plain text, or to deliver plain text versions of your site dynamically.
 
+You can also convert HTML into HTML, ignoring certain document elements, and starting at a root element other than `<html>`. You can choose to take raw Markdown output as well, instead of the default terminal-formatted plain text.
+
 # Install
 
 Globally or locally.
