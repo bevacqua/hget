@@ -11,7 +11,9 @@ var argv = require('minimist')(process.argv.slice(2), {
   alias: {
     root: 'r',
     ignore: 'i',
-    paging: 'p'
+    paging: 'p',
+    html: 'h',
+    markdown: ['md', 'm']
   }
 });
 var hget = require('./');

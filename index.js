@@ -30,10 +30,21 @@ function parse (input, options) {
   var o = options || {};
   if (!o.root) { o.root = 'body,*'; }
   var html = filterInput(input, o);
+  if (o.html) {
+    return sanitize(html);
+  }
   var md = htmlmd(html);
+  if (o.markdown) {
+    return sanitize(md);
+  }
   var term = ultramarked(md, { terminal: true });
   var stripped = stripColorCodes(term);
-  var decoded = he.decode(stripped);
+  var sanitized = sanitize(stripped);
+  return sanitized;
+}
+
+function sanitize (input) {
+  var decoded = he.decode(input);
   var trimmed = decoded.trim();
   return trimmed;
 }

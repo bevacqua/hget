@@ -36,6 +36,8 @@ The options are as follows.
 
 - `root` sets the context root, it defaults to `'body'`. Maybe you want to use `'main'` or something akin to that.
 - `ignore` can be a single selector or an array of selectors. Any elements that match the provided selectors will be removed from the document before rendering the terminal-printable output. Keep in mind that these selectors will be rooted in the `root` element.
+- `html` means that you'll get HTML back, instead of the default human-readable terminal output
+- `markdown` means you'll get Markdown back, instead of the default human-readable terminal output
 
 # CLI
 
