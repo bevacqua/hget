@@ -3,7 +3,7 @@
 var stripColorCodes = require('stripcolorcodes');
 var ultramarked = require('ultramarked');
 var cheerio = require('cheerio');
-var htmlmd = require('html-md');
+var htmlmd = require('htmlmd-2');
 var he = require('he');
 
 function filterInput (input, options) {
