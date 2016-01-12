@@ -17,6 +17,9 @@
   "bin": {
     "hget": "./cli"
   },
+  "scripts": {
+    "test": "lab -P test -v"
+  },
   "engines": {
     "node": ">=0.10.0"
   },
@@ -31,5 +34,9 @@
     "stripcolorcodes": "^0.1.0",
     "type-is": "^1.5.2",
     "ultramarked": "^1.6.2"
+  },
+  "devDependencies": {
+    "code": "^1.5.0",
+    "lab": "^6.2.0"
   }
 }

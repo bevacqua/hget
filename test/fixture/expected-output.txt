@@ -1,0 +1,304 @@
+* Home (/)
+       * API (http://npmjs.org/doc/)
+       * Blog (http://blog.npmjs.org/)
+       * Node.js (http://nodejs.org/)
+       * Jobs (http://www.npmjs.com/jobs/)
+       * Who's Hiring (/whoshiring)
+       * Jut (http://www.jut.io/)
+       * + 14 More... (/whoshiring)
+       * npm Enterprise (/enterprise)
+       * Try the on-premises solution for private npm. (/enterprise)
+
+
+
+      (https://secure.gravatar.com/avatar/550d0153dbeee2fcaede98f906e55d02?s=100&d=retro)
+      Nicolas Bevacqua (/profile)
+
+      Edit Profile (/profile-edit) | Log out (/logout)
+
+   [npm (/static/img/npm.png)
+
+      ]0 (/)
+
+   chalk
+
+      click here to star/unstar this package
+
+      Terminal string styling done right. Created because the `colors`
+      module does some really horrible things.
+
+         npm install chalk
+
+      Oct 12Oct 19Oct 26Nov 02
+
+      126416 downloads yesterday Last Published By
+
+
+      (https://secure.gravatar.com/avatar/87ae21ae50695ae9e522e7a41d480b30?s=50&d=retro)
+      jbnicolai (/~jbnicolai)
+
+      Maintainers
+
+
+      (https://secure.gravatar.com/avatar/d36a92237c75c5337c17b60d90686bf9?s=50&d=retro)
+      sindresorhus (/~sindresorhus)
+
+
+      (https://secure.gravatar.com/avatar/87ae21ae50695ae9e522e7a41d480b30?s=50&d=retro)
+      jbnicolai (/~jbnicolai)
+
+      Version 0.5.1 last updated 4 months ago
+
+      License MIT (http://opensource.org/licenses/MIT)
+
+      Keywords color (/browse/keyword/color), colour
+      (/browse/keyword/colour), colors (/browse/keyword/colors), terminal
+      (/browse/keyword/terminal), console (/browse/keyword/console), cli
+      (/browse/keyword/cli), string (/browse/keyword/string), ansi
+      (/browse/keyword/ansi), styles (/browse/keyword/styles), tty
+      (/browse/keyword/tty), formatting (/browse/keyword/formatting), rgb
+      (/browse/keyword/rgb), 256 (/browse/keyword/256), shell
+      (/browse/keyword/shell), xterm (/browse/keyword/xterm), log
+      (/browse/keyword/log), logging (/browse/keyword/logging),
+      command-line (/browse/keyword/command-line), text
+      (/browse/keyword/text)
+
+      Repository git://github.com/sindresorhus/chalk
+      (https://github.com/sindresorhus/chalk) (git)
+
+      Homepage https://github.com/sindresorhus/chalk
+
+      Bugs https://github.com/sindresorhus/chalk/issues
+
+      Dependencies ansi-styles (/package/ansi-styles), escape-string-regexp
+      (/package/escape-string-regexp), has-ansi (/package/has-ansi),
+      strip-ansi (/package/strip-ansi), supports-color
+      (/package/supports-color)
+
+      Dependents (1000) generator-evolve (/package/generator-evolve),
+      cha-cli (/package/cha-cli), generator-langular
+      (/package/generator-langular), generator-hexo-theme
+      (/package/generator-hexo-theme), generator-angular-require
+      (/package/generator-angular-require), build-friend
+      (/package/build-friend), generator-italystrap
+      (/package/generator-italystrap), generator-fabricator
+      (/package/generator-fabricator), generator-pioneerapp
+      (/package/generator-pioneerapp), generator-mangular
+      (/package/generator-mangular), generator-meanp-modules
+      (/package/generator-meanp-modules), assemble-yaml
+      (/package/assemble-yaml), generator-grunt-maven
+      (/package/generator-grunt-maven), generator-rwdmail
+      (/package/generator-rwdmail), connect-resource-pipeline
+      (/package/connect-resource-pipeline), generator-noyobo
+      (/package/generator-noyobo), generator-config
+      (/package/generator-config), generator-gulp-webapp
+      (/package/generator-gulp-webapp), divshot-cli (/package/divshot-cli),
+      conventional (/package/conventional), and 980 more
+      (/browse/depended/chalk)
+
+      Starred by (82) shidhincr (/~shidhincr), tunnckocore (/~tunnckocore),
+      tengisb (/~tengisb), mohsen (/~mohsen), inderdeep (/~inderdeep),
+      jclem (/~jclem), oakley349 (/~oakley349), jimnox (/~jimnox), tcauduro
+      (/~tcauduro), kmck (/~kmck), ali1k (/~ali1k), humantriangle
+      (/~humantriangle), rickbergfalk (/~rickbergfalk), zlatip (/~zlatip),
+      jits (/~jits), bcoe (/~bcoe), ivangaravito (/~ivangaravito),
+      brianchung808 (/~brianchung808), toddtreece (/~toddtreece), jbnicolai
+      (/~jbnicolai) and 62 more (/browse/star/chalk)
+
+       * Read Me
+
+
+   chalk
+   (https://cdn.rawgit.com/sindresorhus/chalk/77ae94f63ab1ac61389b190e5a59866569d1a376/logo.svg)
+
+         Terminal string styling done right
+
+      Build Status
+      (https://travis-ci.org/sindresorhus/chalk.svg?branch=master)
+      (https://travis-ci.org/sindresorhus/chalk)
+      (http://img.shields.io/badge/unicorn-approved-ff69b4.svg)
+
+      colors.js (https://github.com/Marak/colors.js) is currently the most
+      popular string styling module, but it has serious deficiencies like
+      extending String.prototype which causes all kinds of problems
+      (https://github.com/yeoman/yo/issues/68). Although there are other
+      ones, they either do too much or not enough.
+
+      Chalk is a clean and focused alternative.
+
+      screenshot
+      (https://github.com/sindresorhus/ansi-styles/raw/master/screenshot.png)
+
+   Why
+
+       * Highly performant
+       * Doesn't extend String.prototype
+       * Expressive API
+       * Ability to nest styles
+       * Clean and focused
+       * Auto-detects color support
+       * Actively maintained
+       * Used by 1000+ modules (https://npmjs.org/browse/depended/chalk)
+
+
+   Install
+
+         $ npm install --save chalk
+
+   Usage
+
+      Chalk comes with an easy to use composable API where you just chain
+      and nest the styles you want.
+
+         var chalk = require('chalk');
+         
+         // style a string
+         console.log(  chalk.blue('Hello world!')  );
+         
+         // combine styled and normal strings
+         console.log(  chalk.blue('Hello'), 'World' + chalk.red('!')  );
+         
+         // compose multiple styles using the chainable API
+         console.log(  chalk.blue.bgRed.bold('Hello world!')  );
+         
+         // pass in multiple arguments
+         console.log(  chalk.blue('Hello', 'World!', 'Foo', 'bar', 'biz',
+         'baz')  );
+         
+         // nest styles
+         console.log(  chalk.red('Hello', chalk.underline.bgBlue('world') +
+         '!')  );
+         
+         // nest styles of the same type even (color, underline,
+         background)
+         console.log(  chalk.green('I am a green line ' + chalk.blue('with
+         a blue substring') + ' that becomes green again!')  );
+
+      Easily define your own themes.
+
+         var chalk = require('chalk');
+         var error = chalk.bold.red;
+         console.log(error('Error!'));
+
+      Take advantage of console.log string substitution
+      (http://nodejs.org/docs/latest/api/console.html#console_console_log_data).
+
+         var name = 'Sindre';
+         console.log(chalk.green('Hello %s'), name);
+         //=> Hello Sindre
+
+   API
+
+   chalk.<style>[.<style>...](string, [string...])
+
+      Example: chalk.red.bold.underline('Hello', 'world');
+
+      Chain styles (https://github.com/sindresorhus/chalk#styles) and call
+      the last one as a method with a string argument. Order doesn't
+      matter.
+
+      Multiple arguments will be separated by space.
+
+   chalk.enabled
+
+      Color support is automatically detected, but you can override it.
+
+   chalk.supportsColor
+
+      Detect whether the terminal supports color
+      (https://github.com/sindresorhus/supports-color).
+
+      Can be overridden by the user with the flags --color and --no-color.
+
+      Used internally and handled for you, but exposed for convenience.
+
+   chalk.styles
+
+      Exposes the styles as ANSI escape codes
+      (https://github.com/sindresorhus/ansi-styles).
+
+      Generally not useful, but you might need just the .open or .close
+      escape code if you're mixing externally styled strings with yours.
+
+         var chalk = require('chalk');
+         
+         console.log(chalk.styles.red);
+         //=> {open: '\u001b[31m', close: '\u001b[39m'}
+         
+         console.log(chalk.styles.red.open + 'Hello' +
+         chalk.styles.red.close);
+
+   chalk.hasColor(string)
+
+      Check whether a string has color
+      (https://github.com/sindresorhus/has-ansi).
+
+   chalk.stripColor(string)
+
+      Strip color (https://github.com/sindresorhus/strip-ansi) from a
+      string.
+
+      Can be useful in combination with .supportsColor to strip color on
+      externally styled text when it's not supported.
+
+      Example:
+
+         var chalk = require('chalk');
+         var styledString = getText();
+         
+         if (!chalk.supportsColor) {
+         styledString = chalk.stripColor(styledString);
+         }
+
+   Styles
+
+   General
+
+       * reset
+       * bold
+       * dim
+       * italic (not widely supported)
+       * underline
+       * inverse
+       * hidden
+       * strikethrough (not widely supported)
+
+
+   Text colors
+
+       * black
+       * red
+       * green
+       * yellow
+       * blue
+       * magenta
+       * cyan
+       * white
+       * gray
+
+
+   Background colors
+
+       * bgBlack
+       * bgRed
+       * bgGreen
+       * bgYellow
+       * bgBlue
+       * bgMagenta
+       * bgCyan
+       * bgWhite
+
+
+   License
+
+      MIT (c) Sindre Sorhus (http://sindresorhus.com/)
+
+      npm (/)
+
+       * npm Registry (/)
+       * Documentation (/doc/)
+       * Legal (http://www.npmjs.com/policies)
+       * Website Issues (https://github.com/npm/npm-www/issues)
+       * Node.js Home (http://nodejs.org/)
+       * Blog (http://blog.npmjs.org/)
+       * Status (http://status.npmjs.org/) npm loves you
