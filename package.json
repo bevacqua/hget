@@ -17,6 +17,9 @@
   "bin": {
     "hget": "./cli"
   },
+  "engines": {
+    "node": ">=0.10.0"
+  },
   "dependencies": {
     "cheerio": "^0.17.0",
     "default-pager": "^1.0.1",
