@@ -23,7 +23,7 @@
     "publish-coverage":  "coveralls < coverage/lcov.info"
   },
   "engines": {
-    "node": ">=0.10.0"
+    "node": ">=4.0.0"
   },
   "dependencies": {
     "cheerio": "^0.17.0",
