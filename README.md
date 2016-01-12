@@ -1,6 +1,11 @@
 # hget
 
-> Render websites in plain text from your terminal
+[![npm version][npm-badge]][npm-url]
+[![Build Status][travis-badge]][travis-url]
+[![Coverage Status][coverage-badge]][coverage-url]
+[![Dependency Status][david-badge]][david-url]
+
+> **Render websites in plain text from your terminal**
 
 A CLI and an API to convert HTML into plain text. Can be used to fetch a site's HTML version and convert it into plain text, or to deliver plain text versions of your site dynamically.
 
@@ -81,3 +86,12 @@ MIT
 
 [1]: https://www.npmjs.org/package/chalk
 [2]: http://i.imgur.com/SlwwrqL.png
+
+[npm-badge]: https://img.shields.io/npm/v/hget.svg
+[npm-url]: https://npmjs.com/package/hget
+[travis-badge]: https://api.travis-ci.org/bevacqua/hget.svg
+[travis-url]: https://travis-ci.org/bevacqua/hget
+[coverage-badge]: https://coveralls.io/repos/bevacqua/hget/badge.svg?branch=master&service=github
+[coverage-url]:  https://coveralls.io/github/bevacqua/hget?branch=master
+[david-badge]: https://david-dm.org/bevacqua/hget.svg
+[david-url]: https://david-dm.org/bevacqua/hget
