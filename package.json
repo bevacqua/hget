@@ -17,10 +17,18 @@
   "bin": {
     "hget": "./cli"
   },
+  "scripts": {
+    "test": "lab -P test -v",
+    "coverage": "lab -P test -r lcov -o coverage/lcov.info -r html -o coverage/index.html",
+    "publish-coverage":  "coveralls < coverage/lcov.info"
+  },
+  "engines": {
+    "node": ">=4.0.0"
+  },
   "dependencies": {
-    "cheerio": "^0.17.0",
+    "cheerio": "^0.19.0",
     "default-pager": "^1.0.1",
-    "get-stdin": "^3.0.0",
+    "get-stdin": "^5.0.1",
     "he": "^0.5.0",
     "htmlmd-2": "1.0.0",
     "minimist": "^1.1.0",
@@ -28,5 +36,10 @@
     "stripcolorcodes": "^0.1.0",
     "type-is": "^1.5.2",
     "ultramarked": "^1.6.2"
+  },
+  "devDependencies": {
+    "code": "^2.1.0",
+    "coveralls": "^2.11.6",
+    "lab": "^8.0.1"
   }
 }
