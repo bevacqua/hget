@@ -26,9 +26,9 @@
     "node": ">=4.0.0"
   },
   "dependencies": {
-    "cheerio": "^0.17.0",
+    "cheerio": "^0.19.0",
     "default-pager": "^1.0.1",
-    "get-stdin": "^3.0.0",
+    "get-stdin": "^5.0.1",
     "he": "^0.5.0",
     "htmlmd-2": "1.0.0",
     "minimist": "^1.1.0",
@@ -38,8 +38,8 @@
     "ultramarked": "^1.6.2"
   },
   "devDependencies": {
-    "code": "^1.5.0",
+    "code": "^2.1.0",
     "coveralls": "^2.11.6",
-    "lab": "^6.2.0"
+    "lab": "^8.0.1"
   }
 }
