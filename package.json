@@ -18,7 +18,9 @@
     "hget": "./cli"
   },
   "scripts": {
-    "test": "lab -P test -v"
+    "test": "lab -P test -v",
+    "coverage": "lab -P test -r lcov -o coverage/lcov.info -r html -o coverage/index.html",
+    "publish-coverage":  "coveralls < coverage/lcov.info"
   },
   "engines": {
     "node": ">=0.10.0"
@@ -37,6 +39,7 @@
   },
   "devDependencies": {
     "code": "^1.5.0",
+    "coveralls": "^2.11.6",
     "lab": "^6.2.0"
   }
 }

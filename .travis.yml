@@ -6,7 +6,11 @@ node_js:
   - '0.12'
   - '4'
   - '5'
-  
+
+after_script:
+  - npm run coverage
+  - npm run publish-coverage
+
 cache:
   directories:
     - node_modules
