@@ -1,7 +1,7 @@
 {
   "name": "hget",
   "description": "Render websites in plain text from your terminal",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "homepage": "https://github.com/bevacqua/hget",
   "authors": [
     "Nicolas Bevacqua <nicolasbevacqua@gmail.com>"
@@ -20,7 +20,7 @@
   "scripts": {
     "test": "lab -P test -v",
     "coverage": "lab -P test -r lcov -o coverage/lcov.info -r html -o coverage/index.html",
-    "publish-coverage":  "coveralls < coverage/lcov.info"
+    "publish-coverage": "coveralls < coverage/lcov.info"
   },
   "engines": {
     "node": ">=4.0.0"
