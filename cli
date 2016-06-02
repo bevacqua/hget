@@ -59,13 +59,10 @@ function response (err, res, body) {
   if (err) {
     throw err;
   }
-  if (is.hasBody(res) === false) {
-    throw new Error('Response body is empty.');
-  }
   if (is(res, ['html']) === false) {
     throw new Error('Response Content-Type is not HTML.');
   }
-  parse(body);
+  parse(typeof body === 'string' ? body : '');
 }
 
 function print (result) {
